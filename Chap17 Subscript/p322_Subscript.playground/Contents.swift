@@ -40,8 +40,12 @@ class School {
 let highSchool: School = School()
 highSchool.addStudents(names: "yagom", "muzom", "gongnobi")
 
-let aStudent: Student? = highSchool[1]
+
+// 클래스 인스턴스에 subscript 적용
+let aStudent: Student? = highSchool[1]				// subscript 구현이 없다면 ==> 에러
 print("\(aStudent?.number) \(aStudent?.name)")		// Optional(1) Optional("muzom")
 
+
+// 매개변수 기본값 = 0
 print("\(highSchool[]?.name)")						// Optional("yagom")
 

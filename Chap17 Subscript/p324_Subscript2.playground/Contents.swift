@@ -38,6 +38,7 @@ class School {
 				return
 			}
 			
+			// 학생=3명인데 school[5]와 같이 들어온 경우 ==> 자동으로 school[3]으로 바꿔줌
 			var number: Int = index
 			
 			if index > self.number {
@@ -94,10 +95,11 @@ highSchool[0] = Student(name: "hyejin", number: 0)
 highSchool["nolja"] = 1
 
 print(highSchool[0])										// Optional(__lldb_expr_75.Student(name: "hyejin", number: 0))
+print(highSchool[1])										// Optional(__lldb_expr_3.Student(name: "nolja", number: 1))
 print(highSchool[4])										// nil
 
 print(highSchool["muzom"])									// nil
 print(highSchool["nolja"])									// Optional(1)
 print(highSchool["gongnobi", 2])							// Optional(__lldb_expr_73.Student(name: "gongnobi", number: 2))
-print(highSchool["hyejin", 3])	
-// nil
+print(highSchool["hyejin", 3])								// nil
+
