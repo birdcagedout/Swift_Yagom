@@ -41,18 +41,18 @@ class School {
 class MiddleSchool: School, Named {
 	
 	// 1) required 안 쓰면 에러: Initializer requirement 'init(name:)' can only be satisfied by a 'required' initializer
-//	override init(name: String) {
-//	}
+	//override init(name: String) {
+	//}
 	
 	// 2) override 안 쓰면 에러: Overriding declaration requires an 'override' keyword
 	// ==> 현재 클래스에서 required 처음 사용한다는 의미는 추후 상속할 클래스에 init 제약조건으로 작용할 뿐,
 	//     이미 존재하는 School의 init을 override하겠다는 의미는 내포하지 않으므로 ==> override가 필요하다.
-//	required init(name: String) {
-//	}
+	//required init(name: String) {
+	//}
 	
 	// 3) required, override 둘 다 안 쓰면 ==> 에러 2개 다 나온다.
-//	init(name: String) {
-//	}
+	//init(name: String) {
+	//}
 	
 	required override init(name: String) {
 		super.init(name: name)
